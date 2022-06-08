@@ -1,9 +1,10 @@
 async function main() {
-    const Greetings = await ethers.getContractFactory("Greetings");
+    const Vote = await ethers.getContractFactory("Vote");
     // Start deployment, returning a promise that resolves to a contract object
-    const greetings = await Greetings.deploy();
-    await greetings.deployed();
-    console.log("Contract deployed to address:", greetings.address);
+    const options = { gasPrice : 1000000000, gasLimit : 1000000 };
+    const vote = await Vote.deploy(["Goodluck Jonathan", "Atiku Abubakar", "Peter Obi"], options);
+    await vote.deployed();
+    console.log("Contract deployed to address:", vote.address);
   };
   
   main()

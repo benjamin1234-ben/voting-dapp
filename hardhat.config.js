@@ -20,9 +20,9 @@ module.exports = {
    	networks: {
       	hardhat: {},
       	mumbai: {
-        	url: `${API_URL}`,
-        	accounts: [`0x${PRIVATE_KEY}`]
-      	}
+           	url: `${API_URL}`,
+           	accounts: [`0x${PRIVATE_KEY}`]
+         },
    	},
    	paths: {
    		sources: "./contracts",
